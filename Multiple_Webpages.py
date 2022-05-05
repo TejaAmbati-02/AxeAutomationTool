@@ -9,7 +9,7 @@ import os
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 loc = ("aaa2797.xlsx")
-files = os.listdir("AxeAutomationTool")
+files = os.listdir()
 
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
