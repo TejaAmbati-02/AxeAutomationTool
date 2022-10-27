@@ -27,7 +27,7 @@ def test_google():
 		axe = Axe(driver)
 		axe.inject()
 		results = axe.run()
-		axe.write_results(results, f'axeIntegration{count}{i[12:16]}.json')
+		axe.write_results(results, f'axeIntegration{count}{i[12:16]}.csv')
 		count+=1
 
 	for f in files:
