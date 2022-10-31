@@ -31,8 +31,8 @@ def test_google():
 		count+=1
 
 	for f in files:
-		if f.endswith(".json"):
-			shutil.move(f, "JSONOutputFiles")
+		if f.endswith(".csv"):
+			shutil.move(f, "CSVOutputFiles")
 	driver.close()
 	# assert len(results["violations"]) == 0, axe.report(results["violations"])
 
