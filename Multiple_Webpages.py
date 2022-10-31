@@ -30,9 +30,9 @@ def test_google():
 		axe.write_results(results, f'axeIntegration{count}{i[12:16]}.csv')
 		count+=1
 
-	for f in files:
-		if f.endswith(".csv"):
-			shutil.move(f, "CSVOutputFiles")
+# 	for f in files:
+# 		if f.endswith(".csv"):
+# 			shutil.move(f, "CSVOutputFiles")
 	driver.close()
 	# assert len(results["violations"]) == 0, axe.report(results["violations"])
 
