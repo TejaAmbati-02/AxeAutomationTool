@@ -34,8 +34,7 @@ def test_google():
 
 test_google()
 
-jsonfiles = str([f for f in os.listdir()])
-
+jsonfiles = os.listdir()
 
 for jsonfile in jsonfiles:
 	if jsonfile.endswith(".json") == True:
