@@ -47,20 +47,21 @@ for jsonfile in jsonfiles:
 csv_file = os.listdir('./json_files/')
 
 for files in csv_file:
-	with open(files) as json_file_to_csv:
-		data = json.load(json_file_to_csv)
+	print(files)
+# 	with open(files) as json_file_to_csv:
+# 		data = json.load(json_file_to_csv)
 		
-	json_data = data['violations']
-	data_file = open(f'{files}.csv', 'w')
-	csv_writer = csv.writer(data_file)
-	count = 0
+# 	json_data = data['violations']
+# 	data_file = open(f'{files}.csv', 'w')
+# 	csv_writer = csv.writer(data_file)
+# 	count = 0
 
-	for data in json_data:
-		if count == 0:
-			header = data.keys()
-			csv_writer.writerow(header)
-			count += 1
+# 	for data in json_data:
+# 		if count == 0:
+# 			header = data.keys()
+# 			csv_writer.writerow(header)
+# 			count += 1
 
-		csv_writer.writerow(data.values())
+# 		csv_writer.writerow(data.values())
 
 	data_file.close()
