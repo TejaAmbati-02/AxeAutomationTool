@@ -38,7 +38,7 @@ jsonfiles = str([f for f in os.listdir()])
 print(jsonfiles)
 print(type(jsonfiles))
 
-os.mkdir('json_files')
+# os.mkdir('json_files')
 
 for jsonfile in jsonfiles:
 	if jsonfile.endswith(".json"):
