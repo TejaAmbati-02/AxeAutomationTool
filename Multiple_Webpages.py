@@ -35,7 +35,9 @@ def test_google():
 test_google()
 
 jsonfiles = os.listdir()
+os.mkdir('json_files')
 
 for jsonfile in jsonfiles:
 	if jsonfile.endswith(".json") == True:
-		print(jsonfile)
+		new_path = 'json_files/' + jsonfile
+		shutil.move(jsonfile, new_path)
