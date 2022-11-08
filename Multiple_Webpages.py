@@ -30,19 +30,9 @@ def test_google():
 		results = axe.run()
 		axe.write_results(results, f'axeIntegration{count}{i[12:16]}.json')
 		count+=1
-
+		
 	driver.close()
-	# assert len(results["violations"]) == 0, axe.report(results["violations"])
 
 test_google()
 
 jsonfiles = os.listdir()
-os.mkdir('json_files')
-
-for jsonfile in jsonfiles:
-	if jsonfile.endswith(".json") == True:
-		new_path = 'json_files/' + jsonfile
-		shutil.move(jsonfile, new_path)
-
-csv_file = os.listdir('./json_files/')
-# print(csv_file)
