@@ -48,9 +48,8 @@ csv_file = os.listdir('./json_files/')
 print(csv_file)
 
 for file in csv_file:
-	print(file)
-	print(type(file))
 	with open(file) as json_file:
+		print(json_file)
 		data = json.load(json_file)
 		
 	json_data = data['violations']
