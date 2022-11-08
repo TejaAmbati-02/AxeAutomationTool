@@ -45,6 +45,7 @@ for jsonfile in jsonfiles:
 		shutil.move(jsonfile, new_path)
 
 csv_file = os.listdir('./json_files/')
+print(csv_file)
 
 for file in csv_file:
 	print(file)
