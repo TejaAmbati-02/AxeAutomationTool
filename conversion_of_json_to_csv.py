@@ -1,6 +1,7 @@
 import os
 import json
 import csv
+import shutil
 
 for files in os.listdir():
     if(files.endswith(".json")):
@@ -18,3 +19,9 @@ for files in os.listdir():
                 count += 1
             csv_writer.writerow(emp.values())
 data_file.close()
+
+os.mkdir("csv_files")
+for file in os.listdir():
+    if file.endswith(".csv"):
+            new_path = 'csv_files/' + file
+            shutil.move(file, new_path)
