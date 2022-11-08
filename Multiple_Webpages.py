@@ -41,3 +41,5 @@ for jsonfile in jsonfiles:
 	if jsonfile.endswith(".json") == True:
 		new_path = 'json_files/' + jsonfile
 		shutil.move(jsonfile, new_path)
+aa = os.listdir('./json_files/')
+print(aa)
