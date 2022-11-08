@@ -41,5 +41,6 @@ print(type(jsonfiles))
 os.mkdir('json_files')
 
 for jsonfile in jsonfiles:
-    new_path = './json_files/' + jsonfile
-    shutil.move(jsonfiles, new_path)
+	if jsonfile.endsuwith(".json"):
+		new_path = './json_files/' + jsonfile
+		shutil.move(jsonfile, new_path)
