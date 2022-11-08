@@ -45,24 +45,4 @@ for jsonfile in jsonfiles:
 		shutil.move(jsonfile, new_path)
 
 csv_file = os.listdir('./json_files/')
-print(csv_file)
-
-for file in csv_file:
-	with open(file) as json_file:
-		print(json_file)
-		data = json.load(json_file)
-		
-	json_data = data['violations']
-	data_file = open(f'{file}.csv', 'w')
-	csv_writer = csv.writer(data_file)
-	count = 0
-
-	for data in json_data:
-		if count == 0:
-			header = data.keys()
-			csv_writer.writerow(header)
-			count += 1
-
-		csv_writer.writerow(data.values())
-
-	data_file.close()
+# print(csv_file)
