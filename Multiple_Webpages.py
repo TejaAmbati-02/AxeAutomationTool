@@ -41,5 +41,5 @@ print(type(jsonfiles))
 # os.mkdir('json_files')
 
 for jsonfile in jsonfiles:
-	if jsonfile.endswith(".json"):
+	if jsonfile.endswith(".json") == True:
 		print(jsonfile)
