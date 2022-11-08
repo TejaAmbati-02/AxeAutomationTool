@@ -9,7 +9,6 @@ import os
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
 loc = ("aaa2797.xlsx")
-files = os.listdir()
 
 wb = xlrd.open_workbook(loc)
 sheet = wb.sheet_by_index(0)
@@ -29,10 +28,10 @@ def test_google():
 		results = axe.run()
 		axe.write_results(results, f'axeIntegration{count}{i[12:16]}.json')
 		count+=1
-
-# 	for f in files:
-# 		if f.endswith(".csv"):
-# 			shutil.move(f, "CSVOutputFiles")
+	files = os.listdir()
+	for f in files:
+		if f.endswith(".json"):
+			shutil.move(f, "CSVOutputFiles")
 	driver.close()
 	# assert len(results["violations"]) == 0, axe.report(results["violations"])
 
