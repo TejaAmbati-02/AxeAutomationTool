@@ -34,7 +34,9 @@ def test_google():
 
 test_google()
 
-jsonfiles = [f for f in os.listdir() if '.json' in f.lower()]
+jsonfiles = str([f for f in os.listdir() if '.json' in f.lower()])
+print(jsonfiles)
+print(type(jsonfiles))
 
 os.mkdir('json_files')
 
